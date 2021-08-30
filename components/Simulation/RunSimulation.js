@@ -9,7 +9,10 @@ export const RunSimulation = (arrayPath) => {
     counter++;
     if (counter % 10 == 0) {
       console.log(
-        "The drone arrived at checkpoint - " + arrayPath[index].latitude
+        "The drone arrived at checkpoint - " +
+          arrayPath[index].latitude +
+          " - " +
+          arrayPath[index].longitude
       );
       index++;
       console.log("at index [" + index + "]");

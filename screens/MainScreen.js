@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Text, StyleSheet } from "react-native";
-import invalidDest from "../components/Algorithms/invalidDest";
-import coordArr, {
-  coordPoints,
-} from "../components/Coordinates/UnavailableAreas";
+import { StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import MapView, { Marker, Callout, Polygon } from "react-native-maps";
 import { LoadingScreen } from "./LoadingScreen";
-import { requestPermissionsAsync } from "expo-location";
-import * as Location from "expo-location";
-import { UnavailableArea1 } from "../components/Coordinates/Polygons";
 import { MainMap } from "../components/Map/MainMap";
 
 export const MainScreen = (props) => {
