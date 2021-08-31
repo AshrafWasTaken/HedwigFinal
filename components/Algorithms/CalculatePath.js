@@ -1,15 +1,11 @@
-import coordArr, { coordPoints } from "../Coordinates/UnavailableAreas";
 import {
   NavigationCoordinates,
   NavigationCoordinatesInArray,
 } from "../Coordinates/NavigationLines";
 import { getDistance, findNearest } from "geolib";
 import RoutesGraph from "../Coordinates/RoutesGraph";
-import { AvailableAreas } from "../Coordinates/Polygons";
 
-export const showCasePath = () => {};
 let pathArray = [];
-let pointInPolygon = require("point-in-polygon");
 export const calculatePath = (currentLocation, selectedDestination) => {
   pathArray = [];
   pathArray.push(currentLocation);

@@ -5,7 +5,7 @@ import History from "../screens/History";
 import { AboutUs } from "./AboutUs";
 import MainScreen from "./MainScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { DrawerHeaderSignOutButton } from "../components/CustomDrawerContent/DrawerHeader";
+import { DrawerHeaderSignOutButton } from "../components/CustomDrawerContent/DrawerHeaderSignOutButton";
 const Drawer = createDrawerNavigator();
 export const MainAppContainer = ({ navigation }) => {
   return (

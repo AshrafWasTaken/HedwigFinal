@@ -21,8 +21,9 @@ export const ModelContainer = (props) => {
   const [batteryLevel, setBatteryLevel] = useState(-1);
   const [batteryUse, setBatteryUse] = useState(-1);
   const [distanceSave, setdistanceSave] = useState(props.distance);
+
   //Function for checking valid valus
-  const checkValues = () => {
+  const checkValues = async () => {
     if (name === "") {
       alert("Please enter a name");
       return;
@@ -35,9 +36,15 @@ export const ModelContainer = (props) => {
       alert("invalid input at battery Use");
     } else if (props.distance / batteryUse > 100) {
       alert(
-        "your drone lack the ablility to complet this deliver during that ur battery can hold the traviling charge"
+        "your drone lack the ablility to complet this deliver during that your battery can hold the traviling charge"
       );
-    } else if (props.distance / batteryUse >= batteryUse - 10) {
+    } else {
+      calculateOption();
+    }
+  };
+
+  const calculateOption = () => {
+    if (props.distance / batteryUse >= batteryUse - 10) {
       alert(
         "Battery can't hold for this delivery please make sure your battery charged more than " +
           Math.ceil(props.distance / batteryUse + 10) +
@@ -50,6 +57,7 @@ export const ModelContainer = (props) => {
       );
       addToHistory();
       RunSimulation(props.path);
+      console.log("done");
     }
   };
   //

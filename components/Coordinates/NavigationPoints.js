@@ -49,17 +49,6 @@ export const NavigationMarkers = () => {
           <Text>Coord4</Text>
         </Callout>
       </Marker>
-      <Marker
-        coordinate={{
-          latitude: NavigationCoordinates.coord5.latitude,
-          longitude: NavigationCoordinates.coord5.longitude,
-        }}
-        pinColor={`#a6b864`}
-      >
-        <Callout>
-          <Text>Coord5</Text>
-        </Callout>
-      </Marker>
       <NavigationLines />
     </View>
   );

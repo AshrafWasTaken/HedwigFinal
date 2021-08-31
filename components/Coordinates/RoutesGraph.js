@@ -14,7 +14,7 @@ Coord1RoutingTable.set("coord8", NavigationCoordinates.coord6);
 const Coord2RoutingTable = new Map();
 Coord2RoutingTable.set("coord1", NavigationCoordinates.coord1);
 Coord2RoutingTable.set("coord3", NavigationCoordinates.coord3);
-Coord2RoutingTable.set("coord4", NavigationCoordinates.coor42);
+Coord2RoutingTable.set("coord4", NavigationCoordinates.coord2);
 Coord2RoutingTable.set("coord5", NavigationCoordinates.coord6);
 Coord2RoutingTable.set("coord6", NavigationCoordinates.coord6);
 Coord2RoutingTable.set("coord7", NavigationCoordinates.coord6);
