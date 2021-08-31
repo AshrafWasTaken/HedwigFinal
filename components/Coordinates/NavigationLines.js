@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { Marker, Polyline } from "react-native-maps";
+import { Polyline } from "react-native-maps";
 
 export const NavigationLines = () => {
   return (

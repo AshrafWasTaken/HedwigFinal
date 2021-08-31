@@ -12,7 +12,6 @@ require("firebase/auth");
 import { LogBox } from "react-native";
 
 LogBox.ignoreLogs(["Setting a timer"]);
-// Checks if firebase is not initialized (Initializes it if it isn't)
 
 // Stack navigator initialization
 const Stack = createStackNavigator();
