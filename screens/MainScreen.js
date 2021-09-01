@@ -4,7 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { LoadingScreen } from "./LoadingScreen";
 import { MainMap } from "../components/Map/MainMap";
 
-export const MainScreen = (props) => {
+export const MainScreen = () => {
   // On state load refresh
   useEffect(() => {
     setLoaded(true);

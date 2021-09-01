@@ -1,5 +1,3 @@
-import React from "react";
-
 export const RunSimulation = (arrayPath) => {
   let counter = 0;
   let index = 0;

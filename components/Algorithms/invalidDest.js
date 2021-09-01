@@ -1,6 +1,3 @@
-// Selected is 3/4
-// cord1 is
-
 export const invalidDest = (
   selectedLatitude,
   selectedLongitude,

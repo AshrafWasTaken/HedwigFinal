@@ -7,16 +7,12 @@ import {
   FlatList,
   TouchableOpacity,
 } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import _ from "lodash";
 import LoadingScreen from "./LoadingScreen";
 import Firebase, { ft } from "../components/Firebase/config";
 import { LinearGradient } from "expo-linear-gradient";
 
 export const History = () => {
   const [columns, setColumns] = useState(["Date", "Distance", "Name"]);
-  const [direction, setDirection] = useState(null);
-  const [selectedColumn, setSelectedColumn] = useState(null);
   const [data, setData] = useState([]);
   const tableHeader = () => (
     <View style={styles.tableHeader}>
@@ -24,18 +20,7 @@ export const History = () => {
         {
           return (
             <TouchableOpacity key={index} style={styles.columnHeader}>
-              <Text style={styles.columnHeaderTxt}>
-                {column + " "}
-                {selectedColumn === column && (
-                  <MaterialCommunityIcons
-                    name={
-                      direction === "desc"
-                        ? "arrow-down-drop-circle"
-                        : "arrow-up-drop-circle"
-                    }
-                  />
-                )}
-              </Text>
+              <Text style={styles.columnHeaderTxt}>{column + " "}</Text>
             </TouchableOpacity>
           );
         }

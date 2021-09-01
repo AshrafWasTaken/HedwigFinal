@@ -2,12 +2,12 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { CustomDrawerContent } from "../components/CustomDrawerContent/CustomDrawerContent";
 import History from "../screens/History";
-import { AboutUs } from "./AboutUs";
+import { ContactUs } from "./ContactUs";
 import MainScreen from "./MainScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { DrawerHeaderSignOutButton } from "../components/CustomDrawerContent/DrawerHeaderSignOutButton";
 const Drawer = createDrawerNavigator();
-export const MainAppContainer = ({ navigation }) => {
+export const MainAppContainer = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator
@@ -55,11 +55,11 @@ export const MainAppContainer = ({ navigation }) => {
           }}
         />
         <Drawer.Screen
-          name="About Us"
-          component={AboutUs}
+          name="Contact us"
+          component={ContactUs}
           options={{
             headerShown: true,
-            headerTitle: "About us",
+            headerTitle: "Contact us",
             headerRight: () => <DrawerHeaderSignOutButton />,
 
             headerRightContainerStyle: {

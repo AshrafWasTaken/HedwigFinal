@@ -1,5 +1,5 @@
-import React, { Component, useState } from "react";
-import { Button, Text, View, StyleSheet } from "react-native";
+import React, { useState } from "react";
+import { Text, View, StyleSheet } from "react-native";
 import { LoginInput } from "../components/LoginInput";
 import { PrimaryButton } from "../components/PrimaryButton";
 import { TitleView } from "../components/Title";

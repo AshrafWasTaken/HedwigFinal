@@ -1,11 +1,8 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Text, StyleSheet, Dimensions } from "react-native";
 import { invalidDest } from "../Algorithms/invalidDest";
-import coordArr, {
-  coordPoints,
-  coordPointsV2,
-} from "../Coordinates/UnavailableAreas";
-import MapView, { Marker, Callout, Polygon, Polyline } from "react-native-maps";
+import { coordPointsV2 } from "../Coordinates/UnavailableAreas";
+import MapView, { Marker, Callout, Polyline } from "react-native-maps";
 import { LoadingScreen } from "../../screens/LoadingScreen";
 import { requestForegroundPermissionsAsync } from "expo-location";
 import * as Location from "expo-location";
@@ -14,7 +11,8 @@ import { NavigationMarkers } from "../Coordinates/NavigationPoints";
 import { calculatePath } from "../Algorithms/CalculatePath";
 import ModelContainer from "../DesignComponents/ModelContainer";
 import { getPathDistance } from "../Algorithms/getDistance";
-export const MainMap = (props) => {
+
+export const MainMap = () => {
   //Function to update current latitude and longitude
   const setCurrentLocation = (latitude, longitude) => {
     setCurrentLatitude(latitude);

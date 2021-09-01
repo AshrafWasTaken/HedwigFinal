@@ -10,7 +10,7 @@ import {
   ScrollView,
 } from "react-native";
 import { PrimaryButton } from "../PrimaryButton";
-import { FAB, TextInput, Text, IconButton } from "react-native-paper";
+import { FAB, TextInput, Text } from "react-native-paper";
 import Firebase, { ft } from "../Firebase/config";
 import { RunSimulation } from "../Simulation/RunSimulation";
 
@@ -27,12 +27,15 @@ export const ModelContainer = (props) => {
     if (name === "") {
       alert("Please enter a name");
       return;
-    }
-    if (isNaN(speedAtAvarage) && speedAtAvarage < 5) {
+    } else if (isNaN(speedAtAvarage) || speedAtAvarage < 5) {
       alert("invalid input at speed At Avarage");
-    } else if (isNaN(batteryLevel) && batteryLevel < 1 && batteryLevel > 101) {
+      return;
+    } else if (
+      isNaN(batteryLevel) ||
+      (batteryLevel < 1 && batteryLevel > 101)
+    ) {
       alert("invalid input at battery Level");
-    } else if (isNaN(batteryUse) && batteryUse <= 0) {
+    } else if (isNaN(batteryUse) || batteryUse <= 0) {
       alert("invalid input at battery Use");
     } else if (props.distance / batteryUse > 100) {
       alert(
@@ -111,7 +114,7 @@ export const ModelContainer = (props) => {
   const [modalVisible, setModalVisible] = useState(false);
   useEffect(() => {
     setdistanceSave(props.distance);
-  }, [speedAtAvarage, batteryLevel, batteryUse, props]);
+  }, [speedAtAvarage, batteryLevel, batteryUse, props, distanceSave]);
   return (
     <>
       <FAB
@@ -151,7 +154,7 @@ export const ModelContainer = (props) => {
                     <View style={styles.inner}>
                       <Text style={styles.header}>Ready to go</Text>
                       <Text style={styles.show}>
-                        Distance is : {props.distance} m
+                        Distance is : {distanceSave} m
                       </Text>
                       <TextInput
                         label="Send to"

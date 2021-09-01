@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 
-export const TitleView = (props) => {
+export const TitleView = () => {
   return (
     <View style={styles.titleView}>
       <Image style={styles.logo} source={require("../assets/owlBlack.png")} />
