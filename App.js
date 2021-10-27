@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import LoadingScreen from "./screens/LoadingScreen";
 import { HomeContainer } from "./screens/HomeContainer";
 import Firebase from "./components/Firebase/config";
@@ -8,13 +8,10 @@ import { LogBox } from "react-native";
 
 LogBox.ignoreLogs(["Setting a timer"]);
 
-// Stack navigator initialization
-
 export default function App() {
   // State variables for checking if the app is loaded or if the user is logged in
   const [loaded, setLoaded] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
-
   // Checks state variables
   useEffect(() => {
     Firebase.auth().onAuthStateChanged((user) => {

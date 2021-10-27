@@ -159,17 +159,9 @@ export const MainMap = () => {
             latitude: destinationLatitude,
             longitude: destinationLongitude,
           }}
-          zIndex={-1}
-        />
-        <Marker
-          pinColor={`#7fffd4`}
-          coordinate={{
-            latitude: destinationLatitude,
-            longitude: destinationLongitude,
-          }}
         >
           <Callout>
-            <Text>Your current location</Text>
+            <Text>Destination location</Text>
           </Callout>
         </Marker>
       </MapView>

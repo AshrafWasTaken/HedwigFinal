@@ -39,7 +39,7 @@ export const ModelContainer = (props) => {
       alert("invalid input at battery Use");
     } else if (props.distance / batteryUse > 100) {
       alert(
-        "your drone lack the ablility to complet this deliver during that your battery can hold the traviling charge"
+        "Your drone doesn't have the capability to carry out the selected route."
       );
     } else {
       calculateOption();
@@ -169,14 +169,14 @@ export const ModelContainer = (props) => {
                         right={<TextInput.Affix text="/kmh" />}
                       />
                       <TextInput
-                        label="bettery level"
+                        label="Bettery level"
                         mode="outlined"
                         onChangeText={levelInputHandler}
                         keyboardType="numeric"
                         right={<TextInput.Affix text="/100" />}
                       />
                       <TextInput
-                        label="meter travel per 1%"
+                        label="Meter travel per 1%"
                         mode="outlined"
                         onChangeText={useInputHandler}
                         keyboardType="numeric"
@@ -187,7 +187,7 @@ export const ModelContainer = (props) => {
                         style={styles.btnContainer}
                         onPress={checkValues}
                       >
-                        start
+                        Start
                       </PrimaryButton>
                     </View>
                   </>
